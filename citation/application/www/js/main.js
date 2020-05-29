@@ -31,6 +31,8 @@ if(window.location.href.indexOf('/') !== -1) {
 
 
  if(window.location.href.indexOf('/comment') !== -1) {
+//      pour pas que le formulaire s'envoie à chaque refresh
+     
     if ( window.history.replaceState ) {
       window.history.replaceState( null, null, window.location.href );
     } 
