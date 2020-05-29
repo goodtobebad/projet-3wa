@@ -27,9 +27,14 @@ if(window.location.href.indexOf('/') !== -1) {
     
     $(document).on('click', '.heart', submitForm);
 
-
-
 }
+
+
+ if(window.location.href.indexOf('/comment') !== -1) {
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    } 
+ }
 
 if(window.location.href.indexOf('/game') !== -1) {
     $('.ennemie_img').css('cursor', 'url('+getWwwUrl()+'/images/cursor/spo15.cur), auto');
