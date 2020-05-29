@@ -1,0 +1,14 @@
+<form action="<?= $requestUrl ?>/login" method="POST"> 
+	<div>
+		<i class="fas fa-user"></i>
+		<?php if(isset($error)){ ?>
+			<p class='red'> <?= $error ?> </p>
+		<?php } ?>
+		<input type="text" name="email" placeholder="Adresse mail">	
+		<input type="password" name="password" placeholder="Mot de passe">
+	</div>
+	<div>	
+		<input type="submit" value="Connexion">
+		<a class="click" href='<?= $requestUrl ?>/register'> Pas encore inscrit? cliquez ici ! </a>
+	</div>		
+</form>

@@ -1,0 +1,21 @@
+<div class="change_Infos">
+        <form action="<?= $requestUrl ?>/infos/newinfos" method="POST">
+            <?php if(isset($error)){ ?>
+            <p class="red"> <?= $error ?> </p>
+            <?php } ?>
+            <div>	
+                <label for="firstName"> Nom :
+                    <input type="text" name="firstName" value="<?= $_SESSION['firstName'] ?>">
+                </label>
+                <label for="lastName"> Prénom :
+                    <input type="text" name="lastName" value="<?= $_SESSION['lastName'] ?>">
+                </label>
+                <label for="email"> Email :
+                    <input type="email" name="email" value="<?= $_SESSION['email'] ?>">
+                </label>						
+            </div>			
+            <div>
+                <input type="submit" value="Enregistrer">
+            </div>
+        </form>
+    </div>

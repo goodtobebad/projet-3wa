@@ -1,0 +1,21 @@
+<div class="fav">
+    <?php foreach($favs as $fav){ ?>
+        <div class="card">
+            <div>
+                <img src="<?= $wwwUrl ?>/images/auteurs/<?= $fav['Image']?>" alt="auteur">
+                <h3> <?= $fav['Name']?> </h3>
+            </div>
+            <div>
+                <a href='<?= $requestUrl ?>/comment?id=<?= $fav['Id']?>' class="citation"><p> <?= $fav['Citation']?> </p></a>
+            </div>
+            <div>
+                <form class="hide" id="fav_form<?= $fav['Id'] ?>" action="<?= $requestUrl ?>/favorite" method="POST">
+                    <input name="citationId" type="text" value="<?= $fav['Id'] ?>">
+                </form>      
+                <a href="#"> <i class="fas fa-heart heart red" data-id = "<?= $fav['Id'] ?>"></i> </a>      
+            </div>    
+        </div>
+    <?php } ?>
+   
+
+</div>

@@ -1,0 +1,62 @@
+<div class="comment">
+    <section class="comment_citation">
+        <div>
+            <img src="<?= $wwwUrl ?>/images/auteurs/<?= $citation['Image']?>" alt="auteur">
+            <h3> <?= $citation['Name']?> </h3>
+        </div>
+        <div>
+            <p> <?= $citation['Citation']?> </p>
+        </div>  
+    </section>
+       
+       
+    <section>
+        <form action="<?= $requestUrl ?>/comment" method="POST">
+            <label for="commentaire">Ajouter un commentaire :</label>
+            <input type="text" name="commentaire"/>
+            <input class="envoyer" type="submit" value="envoyer"/>
+        </form>
+        <?php if(empty($commentaires)===false){ ?>
+            <div>
+                <table>
+                    <?php foreach($commentaires as $commentaire){ ?>
+                        <tr>
+                            <td><?= $commentaire['UserName'] ?></td>
+                            <td><?= $commentaire['Comment'] ?></td>
+                            <td><?= $commentaire['CreationTime'] ?></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+                    
+            </div>
+        <?php } ?>
+            
+        
+        
+        
+        
+        
+    </section>   
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+</div>
+
+
+
+<!--  Pour pas que le formulaire s'envoie encore une fois à chaque refresh  -->
+    <script>
+    if ( window.history.replaceState ) {
+      window.history.replaceState( null, null, window.location.href );
+    }
+    </script>

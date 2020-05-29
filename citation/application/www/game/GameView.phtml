@@ -1,0 +1,64 @@
+<div class="game">
+    <div class="createPlayer">
+        <div>    
+            <form>
+                <label for="nom"> Nom :
+                    <input type="text" name="nom">
+                </label>
+                <label> Spécialié :
+                    <select> 
+                        <option>Guerrier</option> 
+                        <option>Mage</option> 
+                        <option>Chasseur</option>
+                    </select>
+                </label>
+                <button> Créer le combattant </button>
+            </form>
+        </div>
+        <div>
+            <p> Les guerriers peuvent régénérer entre 30 et 100 points de vie. </p>
+            <p> Les chasseurs peuvent frapper 2 à 4 fois par attaque. </p>
+            <p> Les mages ajoutent entre 40 et 75 points magiques à leur dégats. </p>
+        </div>
+    </div>
+
+    <div class='fightInfos hide'>
+        <div class="portraits">
+            <div>
+                <div class="name_and_img">
+                    <img class='combattant_img' src='' alt='combattant'>
+                    <h1 class='combattant_name'>  </h1>
+                </div>
+                <div>    
+                    <h2 class='combattant_pv'></h2>
+                </div>
+            </div>
+                <img class="vs" src='<?= $wwwUrl ?>/images/fight/vs.jpg' alt='Versus'>
+            <div>
+                <div class="name_and_img">
+                    <img class='ennemie_img' src='<?= $wwwUrl ?>/images/fight/barbe_noire.png' alt='ennemie'>
+                    <h1> Barbe noire </h1>
+                </div>
+                <div>    
+                    <h2 class='ennemie_pv'></h2>
+                </div>    
+            </div>
+        </div>
+        <div class="degats">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="winner hide">
+        <img src='#' alt="winner">
+        <h1></h1>
+    </div>
+
+
+</div>
+
+
+<script src="<?= $wwwUrl ?>/js/class/Combattant.class.js"></script>
+<script src="<?= $wwwUrl ?>/js/class/Program.class.js"></script>

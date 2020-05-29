@@ -1,0 +1,48 @@
+'use strict';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// FONCTIONS                                                                           //
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// CODE PRINCIPAL                                                                      //
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+if(window.location.href.indexOf('/') !== -1) {
+
+
+    function submitForm(e){
+        event.preventDefault();
+        let id = this.dataset.id;
+        let form = '#fav_form'+ id;
+        $(form).submit();
+    }
+    
+    $(document).on('click', '.heart', submitForm);
+
+
+
+}
+
+if(window.location.href.indexOf('/game') !== -1) {
+    $('.ennemie_img').css('cursor', 'url('+getWwwUrl()+'/images/cursor/spo15.cur), auto');
+
+    function hideForm(event){
+        event.preventDefault();
+        if($('.createPlayer input').val() !== ''){
+            $('.createPlayer').addClass('hide');
+            $('.fightInfos').removeClass('hide');
+            let fight = new Program();
+            fight.infos();
+        }
+    }
+
+    $('.createPlayer button').on('click', hideForm);
+}

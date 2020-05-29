@@ -1,0 +1,37 @@
+<div class="home">
+    <?php foreach($citations as $citation){ ?>
+        <div class="card">
+            <div>
+                <img src="<?= $wwwUrl ?>/images/auteurs/<?= $citation['Image']?>" alt="auteur">
+                <h3> <?= $citation['Name']?> </h3>
+            </div>
+            <div>
+                <a href='<?= $requestUrl ?>/comment?id=<?= $citation['Id']?>' class="citation"><p> <?= $citation['Citation']?> </p></a>
+            </div>
+            <?php if(empty($_SESSION)===false){ ?>
+                <div>
+                    <form class="hide" id="fav_form<?= $citation['Id'] ?>" action="<?= $requestUrl ?>/favorite/addtofavorite" method="POST">
+                        <input name="citationId" type="text" value="<?= $citation['Id'] ?>">
+                    </form>
+                    <?php $verifyFav = false;
+                          foreach($fav as $favori){
+                              if($citation['Id']===$favori['C_id']){
+                                $verifyFav = true;        
+                              }
+                          }
+                    ?>
+                    <?php if($verifyFav){ ?>      
+                        <a href="#"> <i class="fas fa-heart heart red" data-id = "<?= $citation['Id'] ?>"></i> </a>
+                    <?php }else{ ?>
+                        <a href="#"> <i class="fas fa-heart heart" data-id = "<?= $citation['Id'] ?>"></i> </a>
+                    <?php } ?>      
+                </div>
+            <?php } ?>    
+        </div>
+    <?php } ?>
+   
+
+
+
+
+</div>

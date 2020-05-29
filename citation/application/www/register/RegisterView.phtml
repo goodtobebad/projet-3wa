@@ -1,0 +1,14 @@
+<form action="<?= $requestUrl ?>/register" method="POST">
+	<div>
+		<?php if(isset($error)){ ?>
+			<p class='red'> <?= $error ?> </p>
+		<?php } ?>		
+		<input type="text" name="firstName" placeholder="Nom">					
+		<input type="text" name="lastName" placeholder="Prénom">			
+		<input type="email" name="email" placeholder="Adresse mail">	
+		<input type="password" name="password" placeholder='mot de passe'>
+	</div>			
+	<div>
+		<input type="submit" value="s'inscrire">
+	</div>
+</form>
