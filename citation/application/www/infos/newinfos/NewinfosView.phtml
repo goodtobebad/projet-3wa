@@ -4,15 +4,12 @@
             <p class="red"> <?= $error ?> </p>
             <?php } ?>
             <div>	
-                <label for="firstName"> Nom :
-                    <input type="text" name="firstName" value="<?= $_SESSION['firstName'] ?>">
-                </label>
-                <label for="lastName"> Prénom :
-                    <input type="text" name="lastName" value="<?= $_SESSION['lastName'] ?>">
-                </label>
-                <label for="email"> Email :
-                    <input type="email" name="email" value="<?= $_SESSION['email'] ?>">
-                </label>						
+                <label for="firstName"> Nom :</label>
+                <input type="text" name="firstName" id="firstName" value="<?= $_SESSION['firstName'] ?>">
+                <label for="lastName"> Prénom :</label>
+                <input type="text" name="lastName" id="lastName" value="<?= $_SESSION['lastName'] ?>">
+                <label for="email"> Email :</label>
+                <input type="email" name="email" id="email" value="<?= $_SESSION['email'] ?>">
             </div>			
             <div>
                 <input type="submit" value="Enregistrer">
