@@ -4,15 +4,12 @@
                 <?php if(isset($error)){ ?>
                     <p class='red'> <?= $error ?> </p>
                 <?php } ?>	
-                <label for='oldPassword'> Ancien mot de passe :
-                    <input type="password" name="oldPassword">
-                </label>
-                <label for="newPassword"> Nouveau mot de passe :
-                    <input type="password" name="newPassword">
-                </label>
-                <label for="confirmPassword"> Confirmer mot de passe :
-                    <input type="password" name="confirmPassword">
-                </label>						
+                <label for='oldPassword'> Ancien mot de passe :</label>
+                <input type="password" name="oldPassword" id="oldPassword">
+                <label for="newPassword"> Nouveau mot de passe :</label>
+                <input type="password" name="newPassword" id="newPassword">
+                <label for="confirmPassword"> Confirmer mot de passe :</label>
+                <input type="password" name="confirmPassword" id="confirmPassword">    
             </div>			
             <div>
                 <input type="submit" value="Enregistrer">
