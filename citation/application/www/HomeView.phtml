@@ -10,9 +10,6 @@
             </div>
             <?php if(empty($_SESSION)===false){ ?>
                 <div>
-                    <form class="hide" id="fav_form<?= $citation['Id'] ?>" action="<?= $requestUrl ?>/favorite/addtofavorite" method="POST">
-                        <input name="citationId" type="text" value="<?= $citation['Id'] ?>">
-                    </form>
                     <?php $verifyFav = false;
                           foreach($fav as $favori){
                               if($citation['Id']===$favori['C_id']){
