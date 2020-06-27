@@ -14,6 +14,5 @@ class AddtofavoriteController
     {
         $citation = new CitationModel();
         $addToFavorite = $citation->addToFavorite($_POST);
-        $http->redirectTo('/');
     }
 }
